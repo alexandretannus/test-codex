@@ -1,0 +1,44 @@
+# Build artifacts
+/target/
+/build/
+/out/
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDEs and editors
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and runtime files
+*.log
+*.pid
+*.seed
+
+# Java bytecode
+*.class
+
+# Spring Boot
+spring.log
+
+# Environment files
+.env
+.env.*
+
+# Temporary files
+*.tmp
+*.swp
