@@ -1,6 +1,6 @@
 # demo
 
-Spring Boot 4 Maven project using Java 25 with:
+Spring Boot 4 Maven project using Java 21 with:
 
 - Spring Web
 - Spring Data JPA
