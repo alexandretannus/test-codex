@@ -1,0 +1,66 @@
+﻿{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-02-16T00:00:00.000Z",
+  "__export_source": "codex-generated",
+  "resources": [
+    {
+      "_id": "wrk_demo_api",
+      "_type": "workspace",
+      "name": "Demo API",
+      "description": "Spring Boot demo endpoints"
+    },
+    {
+      "_id": "env_demo_base",
+      "_type": "environment",
+      "parentId": "wrk_demo_api",
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:8080",
+        "username": "user",
+        "password": "password"
+      }
+    },
+    {
+      "_id": "fld_hello",
+      "_type": "request_group",
+      "parentId": "wrk_demo_api",
+      "name": "hello"
+    },
+    {
+      "_id": "fld_actuator",
+      "_type": "request_group",
+      "parentId": "wrk_demo_api",
+      "name": "actuator"
+    },
+    {
+      "_id": "req_hello",
+      "_type": "request",
+      "parentId": "fld_hello",
+      "name": "GET /hello",
+      "method": "GET",
+      "url": "{{ _.base_url }}/hello"
+    },
+    {
+      "_id": "req_health",
+      "_type": "request",
+      "parentId": "fld_actuator",
+      "name": "GET /actuator/health",
+      "method": "GET",
+      "url": "{{ _.base_url }}/actuator/health"
+    },
+    {
+      "_id": "req_info",
+      "_type": "request",
+      "parentId": "fld_actuator",
+      "name": "GET /actuator/info (Basic Auth)",
+      "method": "GET",
+      "url": "{{ _.base_url }}/actuator/info",
+      "authentication": {
+        "type": "basic",
+        "username": "{{ _.username }}",
+        "password": "{{ _.password }}"
+      }
+    }
+  ]
+}
